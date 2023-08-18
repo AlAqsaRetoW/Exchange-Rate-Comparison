@@ -22,8 +22,6 @@ def read_table_from_html(html_table: str) -> Table:
 
         if len(cells) > 0:
             cell_values = [cell.text.strip() for cell in cells]
-            # cell_values[2] = float(cell_values[2].replace('.', '').replace(',', '.'))
-            # cell_values[3] = float(cell_values[3].replace('.', '').replace(',', '.'))
             table_rows.append(cell_values)
 
     return Table(table_rows)
